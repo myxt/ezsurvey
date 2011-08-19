@@ -1,4 +1,4 @@
-<h2 class="attributetype">{"Number entry"|i18n( 'survey' )}</h2>
+<h2 class="attributetype">{"Transaction"|i18n( 'survey' )}</h2>
 
 <div class="block">
 <label>{"Text of question"|i18n( 'survey' )}:</label>

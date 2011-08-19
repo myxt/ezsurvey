@@ -27,7 +27,7 @@ QuestionTypeList[]=receiver
 QuestionTypeList[]=feedbackfield
 QuestionTypeList[]=dateentry
 QuestionTypeList[]=timeentry
-QuestionTypeList[]=donationentry
+QuestionTypeList[]=transactionentry
 
 # Example group of a custom survey attribute in the extension custom
 # Will be availlable in:

@@ -1,12 +1,12 @@
 <?php
 
-class eZSurveyDonationEntry extends eZSurveyEntry
+class eZSurveyTransactionEntry extends eZSurveyEntry
 {
-    function eZSurveyDonationEntry( $row = false )
+    function eZSurveyTransactionEntry( $row = false )
     {
         if ( !isset( $row['mandatory'] ) )
             $row['mandatory'] = 1;
-        $row['type'] = 'DonationEntry';
+        $row['type'] = 'TransactionEntry';
         $this->eZSurveyEntry( $row );
     }
 
@@ -30,7 +30,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
             $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Please answer the question %number as well!', null,
                                                                   array( '%number' => $this->questionNumber() ) ),
                                              'question_number' => $this->questionNumber(),
-                                             'code' => 'donation_answer_question',
+                                             'code' => 'transaction_answer_question',
                                              'question' => $this );
             return $variableArray;
         }
@@ -77,7 +77,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
             case eZInputValidator::STATE_ACCEPTED:
             {
                 $http = eZHTTPTool::instance();
-                $http->setSessionVariable( "donation", $answer );
+                $http->setSessionVariable( "transaction", $answer );
             }
             break;
 
@@ -91,7 +91,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                         $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question %number is not an integer number!', null,
                                                                               array( '%number' => $this->questionNumber() ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_not_integer',
+                                                         'code' => 'transaction_not_integer',
                                                          'question' => $this );
                     }
                     else
@@ -99,7 +99,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                         $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question %number is not a number!', null,
                                                                               array( '%number' => $this->questionNumber() ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_not_number',
+                                                         'code' => 'transaction_not_number',
                                                          'question' => $this );
                     }
                 }
@@ -111,7 +111,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                                                                               array( '%number' => $this->questionNumber(),
                                                                                      '%max' => $maxText ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_not_integer_or_lower_than_max',
+                                                         'code' => 'transaction_not_integer_or_lower_than_max',
                                                          'question' => $this );
                     }
                     else
@@ -120,7 +120,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                                                                               array( '%number' => $this->questionNumber(),
                                                                                      '%max' => $maxText ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_lower_than_max',
+                                                         'code' => 'transaction_lower_than_max',
                                                          'question' => $this );
                     }
                 }
@@ -132,7 +132,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                                                                               array( '%number' => $this->questionNumber(),
                                                                                      '%min' => $minText ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_not_integer_or_greater_to_min',
+                                                         'code' => 'transaction_not_integer_or_greater_to_min',
                                                          'question' => $this );
                     }
                     else
@@ -141,7 +141,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                                                                               array( '%number' => $this->questionNumber(),
                                                                                      '%min' => $minText ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_greater_to_min',
+                                                         'code' => 'transaction_greater_to_min',
                                                          'question' => $this );
                     }
                 }
@@ -154,7 +154,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                                                                                      '%min' => $minText,
                                                                                      '%max' => $maxText ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_not_integer_not_between_min_max',
+                                                         'code' => 'transaction_not_integer_not_between_min_max',
                                                          'question' => $this );
                     }
                     else
@@ -164,7 +164,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                                                                                      '%min' => $minText,
                                                                                      '%max' => $maxText ) ),
                                                          'question_number' => $this->questionNumber(),
-                                                         'code' => 'donation_not_between_min_max',
+                                                         'code' => 'transaction_not_between_min_max',
                                                          'question' => $this );
                     }
                 }
@@ -178,7 +178,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question %number is not an integer number!', null,
                                                                           array( '%number' => $this->questionNumber() ) ),
                                                      'question_number' => $this->questionNumber(),
-                                                     'code' => 'donation_not_integer',
+                                                     'code' => 'transaction_not_integer',
                                                      'question' => $this );
                 }
                 else
@@ -186,7 +186,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question %number is not a number!', null,
                                                                           array( '%number' => $this->questionNumber() ) ),
                                                      'question_number' => $this->questionNumber(),
-                                                     'code' => 'donation_not_number',
+                                                     'code' => 'transaction_not_number',
                                                      'question' => $this );
                 }
             }break;
@@ -237,7 +237,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question with id %number is not an integer number!', null,
                                                                           array( '%number' => $this->ID ) ),
                                                      'question_id' => $this->ID,
-                                                     'code' => 'donation_not_integer_number',
+                                                     'code' => 'transaction_not_integer_number',
                                                      'question' => $this );
                 }
                 else
@@ -245,7 +245,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question with id %number is not an number!', null,
                                                                           array( '%number' => $this->ID ) ),
                                                      'question_id' => $this->ID,
-                                                     'code' => 'donation_not_number',
+                                                     'code' => 'transaction_not_number',
                                                      'question' => $this );
                 }
             }
@@ -266,7 +266,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question with id %number is not an integer number!', null,
                                                                           array( '%number' => $this->ID ) ),
                                                      'question_id' => $this->ID,
-                                                     'code' => 'donation_not_integer_number',
+                                                     'code' => 'transaction_not_integer_number',
                                                      'question' => $this );
                 }
                 else
@@ -274,7 +274,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' =>  ezpI18n::tr( 'survey', 'Entered text in the question with id %number is not an number!', null,
                                                                            array( '%number' => $this->ID ) ),
                                                      'question_id' => $this->ID,
-                                                     'code' => 'donation_not_number',
+                                                     'code' => 'transaction_not_number',
                                                      'question' => $this );
                 }
             }
@@ -296,7 +296,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question with id %number is not an integer number!', null,
                                                                           array( '%number' => $this->ID ) ),
                                                      'question_id' => $this->ID,
-                                                     'code' => 'donation_not_integer_number',
+                                                     'code' => 'transaction_not_integer_number',
                                                      'question' => $this );
                 }
                 else
@@ -304,7 +304,7 @@ class eZSurveyDonationEntry extends eZSurveyEntry
                     $validation['errors'][] = array( 'message' => ezpI18n::tr( 'survey', 'Entered text in the question with id %number is not an number!', null,
                                                                           array( '%number' => $this->ID ) ),
                                                      'question_id' => $this->ID,
-                                                     'code' => 'donation_not_number',
+                                                     'code' => 'transaction_not_number',
                                                      'question' => $this );
                 }
             }
@@ -387,6 +387,6 @@ class eZSurveyDonationEntry extends eZSurveyEntry
     }
 }
 
-eZSurveyQuestion::registerQuestionType( ezpI18n::tr( 'survey', 'Donation Entry' ), 'DonationEntry' );
+eZSurveyQuestion::registerQuestionType( ezpI18n::tr( 'survey', 'transaction Entry' ), 'TransactionEntry' );
 
 ?>

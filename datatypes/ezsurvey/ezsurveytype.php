@@ -417,11 +417,10 @@ class eZSurveyType extends eZDataType
                     $survey->executeBeforeLastRedirect( $node );
 
                     $module = $GLOBALS['module'];
-                    if( $http->hasSessionVariable( "donation" ) )
+                    if( $http->hasSessionVariable( "transaction" ) )
                     {
-                        //$module->redirectTo( eZSys::serverURL() . "/ideal/donate" );
-                        $http->setSessionVariable( "donation_redirect", $survey->attribute( 'redirect_submit' ) );
-                        header( "Location: " . eZSys::serverURL() . "/ideal/donate" );
+                        $http->setSessionVariable( "transaction_redirect", $survey->attribute( 'redirect_submit' ) );
+                        header( "Location: " . eZSys::serverURL() . "/transaction/donate" );
                         return;
                     }
 
