@@ -76,7 +76,6 @@ class eZSurveyTransactionEntry extends eZSurveyEntry
         {
             case eZInputValidator::STATE_ACCEPTED:
             {
-                $http = eZHTTPTool::instance();
                 $http->setSessionVariable( "transaction", $answer );
             }
             break;
@@ -387,6 +386,6 @@ class eZSurveyTransactionEntry extends eZSurveyEntry
     }
 }
 
-eZSurveyQuestion::registerQuestionType( ezpI18n::tr( 'survey', 'transaction Entry' ), 'TransactionEntry' );
+eZSurveyQuestion::registerQuestionType( ezpI18n::tr( 'survey', 'Transaction Entry' ), 'TransactionEntry' );
 
 ?>
