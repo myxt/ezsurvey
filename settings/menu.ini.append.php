@@ -7,8 +7,8 @@ Part[ezsurveynavigationpart]=Survey
 Tabs[]=survey
 
 [Topmenu_survey]
-Name=Survey
-Tooltip=Add your own survey.
+Name=Vragenlijsten
+Tooltip=Vragenlijsten beheren
 URL[]
 URL[default]=survey/list
 URL[browse]=survey/list
