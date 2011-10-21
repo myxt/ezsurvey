@@ -117,7 +117,7 @@
     <name>survey</name>
     <message>
         <source>Embedded form</source>
-        <translation type="unfinished"></translation>
+        <translation>Ingevoegd formulier</translation>
     </message>
     <message>
         <source>Survey</source>
