@@ -31,7 +31,8 @@ class eZSurveyDateEntry extends eZSurveyEntry
                                              'question' => $this );
         }
         
-        $data = explode( '-', $answer );
+        /*
+        $data = explode( '-', $answer );        
         $validator = new MyxtDateTimeValidator();
         if ( $validator->validateDate( $data[0], $data[1], $data[2] ) == eZInputValidator::STATE_INVALID )
         {
@@ -43,6 +44,7 @@ class eZSurveyDateEntry extends eZSurveyEntry
                                              'question' => $this );
         	
         }
+        */
 
         $this->setAnswer( $answer );
         $variableArray['answer'] = $answer;
