@@ -76,7 +76,7 @@
     </message>
     <message>
         <source>New translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nieuwe vertaling</translation>
     </message>
 </context>
 <context>
@@ -332,7 +332,7 @@
     </message>
     <message>
         <source>Uncheck option</source>
-        <translation>Optie uitviken</translation>
+        <translation>Optie uitvinken</translation>
     </message>
     <message>
         <source>Related object entry</source>
@@ -873,51 +873,51 @@
     </message>
     <message>
         <source>Time entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Tijdveld</translation>
     </message>
     <message>
         <source>Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Op dit moment</translation>
     </message>
     <message>
         <source>Please enter a valid date!</source>
-        <translation type="unfinished"></translation>
+        <translation>De ingevoerde datum is ongeldig.</translation>
     </message>
     <message>
         <source>Email Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>E-mailveld</translation>
     </message>
     <message>
         <source>Feedback field</source>
-        <translation type="unfinished"></translation>
+        <translation>Feedbackveld</translation>
     </message>
     <message>
         <source>Number Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Nummerveld</translation>
     </message>
     <message>
         <source>Form Receiver</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulier Ontvanger</translation>
     </message>
     <message>
         <source>Related object</source>
-        <translation type="unfinished"></translation>
+        <translation>Gerelateerd object</translation>
     </message>
     <message>
         <source>Section Header</source>
-        <translation type="unfinished"></translation>
+        <translation>Sectie Kop</translation>
     </message>
     <message>
         <source>Text Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekstveld</translation>
     </message>
     <message>
         <source>Please enter a valid time!</source>
-        <translation type="unfinished"></translation>
+        <translation>De ingevoerde tijd is ongeldig.</translation>
     </message>
     <message>
         <source>Transaction Entry</source>
-        <translation type="unfinished"></translation>
+        <translation>Transactieveld</translation>
     </message>
 </context>
 </TS>
