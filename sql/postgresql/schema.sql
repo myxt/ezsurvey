@@ -16,6 +16,7 @@ CREATE TABLE ezsurvey (
     published integer DEFAULT 0 NOT NULL,
     persistent integer DEFAULT 0 NOT NULL,
     one_answer integer DEFAULT 0 NOT NULL,
+    store_result integer DEFAULT 1 NOT NULL,
     contentobject_id integer DEFAULT 0 NOT NULL,
     contentobjectattribute_id integer DEFAULT 0 NOT NULL,
     contentobjectattribute_version integer DEFAULT 0 NOT NULL,

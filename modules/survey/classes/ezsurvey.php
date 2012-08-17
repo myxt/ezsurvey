@@ -77,6 +77,10 @@ class eZSurvey extends eZPersistentObject
                                                                 'datatype' => 'integer',
                                                                 'default' => '0',
                                                                 'required' => false ),
+                                         'store_result' => array( 'name' => 'StoreResult',
+                                                                  'datatype' => 'integer',
+                                                                  'default' => '1',
+                                                                  'required' => false ),
                                          'valid_from' => array( 'name' => 'ValidFrom',
                                                                 'datatype' => 'integer',
                                                                 'default' => '0',
@@ -141,6 +145,7 @@ class eZSurvey extends eZPersistentObject
                       'published' => $this->Published,
                       'one_answer' => $this->OneAnswer,
                       'persistent' => $this->Persistent,
+                      'store_result' => $this->StoreResult,
                       'redirect_cancel' => $this->RedirectCancel,
                       'redirect_submit' => $this->RedirectSubmit );
         $cloned = new eZSurvey( $row );
@@ -808,6 +813,12 @@ class eZSurvey extends eZPersistentObject
             $this->setAttribute( 'one_answer', 1 );
         else
             $this->setAttribute( 'one_answer', 0 );
+
+        $postSurveyStoreResult = $prefix . '_ezsurvey_store_result_' . $attributeID;
+        if ( $http->hasPostVariable( $postSurveyStoreResult ) )
+            $this->setAttribute( 'store_result', 1 );
+        else
+            $this->setAttribute( 'store_result', 0 );
 
         $postValidToNoLimit = $prefix . '_ezsurvey_valid_to_no_limit_' . $attributeID;
         if ( $http->hasPostVariable( $postValidToNoLimit ) )

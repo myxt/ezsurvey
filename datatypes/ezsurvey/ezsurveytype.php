@@ -362,8 +362,8 @@ class eZSurveyType extends eZDataType
                 $result->setAttribute( 'user_session_id', $sessionID );
                 if ( $http->hasPostVariable( $postSurveyStoreButton ) && $validation['error'] == false )
                 {
-
-                    $result->storeResult( $params );
+                    //if( $survey->attribute( 'store_result' ) == 1 )
+                        $result->storeResult( $params );
 
                     $postReceiverID = self::PREFIX_ATTRIBUTE . '_ezsurvey_receiver_id_' . $contentObjectAttributeID;
                     if ( $http->hasPostVariable( $postReceiverID ) and
@@ -425,7 +425,7 @@ class eZSurveyType extends eZDataType
                     }
 
                     $href = trim( $survey->attribute( 'redirect_submit' ) );
-                    
+
                     if ( $module instanceof eZModule )
                     {
                         if ( trim( $href ) != "" )
