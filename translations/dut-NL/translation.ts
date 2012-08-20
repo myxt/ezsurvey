@@ -131,16 +131,32 @@
         <translation>Actief</translation>
     </message>
     <message>
-        <source>Only one answer allowed.</source>
-        <translation>Slechts één antwoord toegestaan.</translation>
+        <source>When checked, the survey is visible and can be answered.</source>
+        <translation>Als dit veld is aangevinkt is de vragenlijst zichtbaar en kunnen de vragen worden beantwoord.</translation>
     </message>
     <message>
-        <source>Persistent user input. ( Users will be able to edit survey later. )</source>
-        <translation>Blijvende invoer (gebruikers kunnen de antwoorden later nog wijzigen)</translation>
+        <source>Only one answer allowed</source>
+        <translation>Slechts één antwoord toegestaan</translation>
+    </message>
+    <message>
+        <source>When checked, each user can only answer this survey once. Anonymous users are tracked with cookies.</source>
+        <translation>Als dit veld is aangevinkt kan iedere bezoekers de vragenlijst maar één keer invullen. Anonieme bezoekers worden gecontroleerd met behulp van cookies.</translation>
+    </message>
+    <message>
+        <source>Persistent user input</source>
+        <translation>Blijvende invoer</translation>
+    </message>
+    <message>
+        <source>When checked, users will be able to edit their answers when the return. Anonymous users are tracked with cookies.</source>
+        <translation>Als dit veld is aangevinkt dan kunnen bezoekers de ingevulde antwoorden aanpassen bij terugkeer. Anonieme bezoekers worden gecontroleerd met behulp van cookies.</translation>
     </message>
     <message>
         <source>Store result</source>
-        <translation>Ingevulde gegevens opslaan.</translation>
+        <translation>Gegevens opslaan</translation>
+    </message>
+    <message>
+        <source>When unchecked, the results are not stored in the database (use the recipient form field to send the results by mail).</source>
+        <translation>Als dit veld niet is aangevinkt worden de ingevulde gegevens niet in de database bewaard (gebruik het formulierveld 'Ontvanger' om de resultaten per e-mail te versturen).</translation>
     </message>
     <message>
         <source>Active from</source>

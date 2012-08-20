@@ -131,15 +131,31 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Only one answer allowed.</source>
+        <source>When checked, the survey is visible and can be answered.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Persistent user input. ( Users will be able to edit survey later. )</source>
+        <source>Only one answer allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When checked, each user can only answer this survey once. Anonymous users are tracked with cookies.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Persistent user input</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When checked, users will be able to edit their answers when the return. Anonymous users are tracked with cookies.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Store result</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When unchecked, the results are not stored in the database (use the recipient form field to send the results by mail).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

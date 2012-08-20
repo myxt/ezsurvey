@@ -133,16 +133,28 @@ function removeClass( element, className )
 
     <div class="block float-break">
     <div class="element">
-    <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_enabled_{$attributeID}" {section show=$survey.enabled|eq(1)}checked="checked"{/section} /> {'Enabled'|i18n( 'survey' )}</label>
-    </div>
-<div class="element">
-    <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_one_answer_{$attributeID}"{section show=$survey.one_answer|eq(1)} checked="checked"{/section} /> {'Only one answer allowed.'|i18n('survey')}</label>
-    </div>
-    <div class="element">
-    <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_persistent_{$attributeID}"{section show=$survey.persistent|eq(1)} checked="checked"{/section} /> {'Persistent user input. ( Users will be able to edit survey later. )'|i18n('survey')}</label>
+        <label>
+            <input type="checkbox" name="{$prefixAttribute}_ezsurvey_enabled_{$attributeID}" {section show=$survey.enabled|eq(1)}checked="checked"{/section} /> {'Enabled'|i18n( 'survey' )}
+            <span class="classattribute-description">{'When checked, the survey is visible and can be answered.'|i18n( 'survey' )}</span>
+        </label>
     </div>
     <div class="element">
-    <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_store_result_{$attributeID}"{section show=$survey.store_result|eq(1)} checked="checked"{/section} /> {'Store result'|i18n('survey')}</label>
+        <label>
+            <input type="checkbox" name="{$prefixAttribute}_ezsurvey_one_answer_{$attributeID}"{section show=$survey.one_answer|eq(1)} checked="checked"{/section} /> {'Only one answer allowed'|i18n('survey')}
+            <span class="classattribute-description">{'When checked, each user can only answer this survey once. Anonymous users are tracked with cookies.'|i18n( 'survey' )}</span>
+        </label>
+    </div>
+    <div class="element">
+        <label>
+            <input type="checkbox" name="{$prefixAttribute}_ezsurvey_persistent_{$attributeID}"{section show=$survey.persistent|eq(1)} checked="checked"{/section} /> {'Persistent user input'|i18n('survey')}
+            <span class="classattribute-description">{'When checked, users will be able to edit their answers when the return. Anonymous users are tracked with cookies.'|i18n( 'survey' )}</span>
+        </label>
+    </div>
+    <div class="element">
+        <label>
+            <input type="checkbox" name="{$prefixAttribute}_ezsurvey_store_result_{$attributeID}"{section show=$survey.store_result|eq(1)} checked="checked"{/section} /> {'Store result'|i18n('survey')}
+            <span class="classattribute-description">{'When unchecked, the results are not stored in the database (use the recipient form field to send the results by mail).'|i18n( 'survey' )}</span>
+        </label>
     </div>
     </div>
 
