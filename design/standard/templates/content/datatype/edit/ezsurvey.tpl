@@ -142,7 +142,7 @@ function removeClass( element, className )
     <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_persistent_{$attributeID}"{section show=$survey.persistent|eq(1)} checked="checked"{/section} /> {'Persistent user input. ( Users will be able to edit survey later. )'|i18n('survey')}</label>
     </div>
     <div class="element">
-    <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_store_result_{$attributeID}"{section show=$survey.store_result|eq(1)} checked="checked"{/section} /> {'Store result. ( The result is stored in the database. )'|i18n('survey')}</label>
+    <label><input type="checkbox" name="{$prefixAttribute}_ezsurvey_store_result_{$attributeID}"{section show=$survey.store_result|eq(1)} checked="checked"{/section} /> {'Store result'|i18n('survey')}</label>
     </div>
     </div>
 

@@ -139,7 +139,7 @@
         <translation>Blijvende invoer (gebruikers kunnen de antwoorden later nog wijzigen)</translation>
     </message>
     <message>
-        <source>Store result. ( The result will be stored in the database. )</source>
+        <source>Store result</source>
         <translation>Ingevulde gegevens opslaan.</translation>
     </message>
     <message>

@@ -139,7 +139,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Store result. ( The result will be stored in the database. )</source>
+        <source>Store result</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
