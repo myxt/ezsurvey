@@ -362,7 +362,7 @@ class eZSurveyType extends eZDataType
                 $result->setAttribute( 'user_session_id', $sessionID );
                 if ( $http->hasPostVariable( $postSurveyStoreButton ) && $validation['error'] == false )
                 {
-                    //if( $survey->attribute( 'store_result' ) == 1 )
+                    if( $survey->attribute( 'store_result' ) == 1 )
                         $result->storeResult( $params );
 
                     $postReceiverID = self::PREFIX_ATTRIBUTE . '_ezsurvey_receiver_id_' . $contentObjectAttributeID;
@@ -410,6 +410,8 @@ class eZSurveyType extends eZDataType
                         $mail->setReceiver( $mailTo );
                         $mail->setSubject( $subject );
                         $mail->setBody( $templateResult );
+
+                        eZDebug::writeDebug($mail);
 
                         $mailResult = eZMailTransport::send( $mail );
 

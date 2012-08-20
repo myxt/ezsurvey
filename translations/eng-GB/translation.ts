@@ -139,6 +139,10 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Store result. ( The result will be stored in the database. )</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Active from</source>
         <translation type="unfinished"></translation>
     </message>

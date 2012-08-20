@@ -139,6 +139,10 @@
         <translation>Blijvende invoer (gebruikers kunnen de antwoorden later nog wijzigen)</translation>
     </message>
     <message>
+        <source>Store result. ( The result will be stored in the database. )</source>
+        <translation>Ingevulde gegevens opslaan.</translation>
+    </message>
+    <message>
         <source>Active from</source>
         <translation>Actief vanaf</translation>
     </message>
