@@ -2,7 +2,7 @@
 //
 // Created on: <11-Jun-2008 15:47:51 br>
 //
-// Copyright (C) 2008-2008 Grenland Web as. All rights reserved.
+// Copyright (C) 1999-2012 eZ Systems AS. All rights reserved.
 //
 // This source file is part of the eZ publish (tm) Open Source Content
 // Management System.
@@ -193,8 +193,7 @@ if ( $Module->isCurrentAction( 'BrowseForObjects' ) )
     return eZModule::HOOK_STATUS_CANCEL_RUN;
 }
 
-require_once( 'kernel/common/template.php' );
-$tpl = templateInit();
+$tpl = eZTemplate::factory();
 
 $tpl->setVariable( 'state', $state );
 $tpl->setVariable( 'content_class_list', $contentClassList );
