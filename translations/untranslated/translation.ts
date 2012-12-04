@@ -904,4 +904,11 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>kernel/navigationpart</name>
+    <message>
+        <source>Survey</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>
