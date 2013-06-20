@@ -4,7 +4,7 @@
 //
 // Created on: <16-Jan-2008 21:40:43 br>
 //
-// Copyright (C) 1999-2012 eZ Systems AS. All rights reserved.
+// Copyright (C) 1999-2013 eZ Systems AS. All rights reserved.
 //
 // This source file is part of the eZ Publish (tm) Open Source Content
 // Management System.
@@ -417,7 +417,6 @@ class eZSurveyType extends eZDataType
                     }
                     $survey->executeBeforeLastRedirect( $node );
 
-                    $module = $GLOBALS['module'];
                     if( $http->hasSessionVariable( "transaction" ) )
                     {
                         $http->setSessionVariable( "transaction_redirect", $survey->attribute( 'redirect_submit' ) );
@@ -426,6 +425,7 @@ class eZSurveyType extends eZDataType
                     }
 
                     $href = trim( $survey->attribute( 'redirect_submit' ) );
+                    $module = $GLOBALS['eZRequestedModule'];
 
                     if ( $module instanceof eZModule )
                     {

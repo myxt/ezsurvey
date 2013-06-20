@@ -4,7 +4,7 @@
 //
 // Created on: <17-Feb-2008 20:40:08 br>
 //
-// Copyright (C) 1999-2012 eZ Systems AS. All rights reserved.
+// Copyright (C) 1999-2013 eZ Systems AS. All rights reserved.
 //
 // This source file is part of the eZ Publish (tm) Open Source Content
 // Management System.
@@ -68,7 +68,7 @@ class eZSurveyRelatedObject extends eZSurveyQuestion
         }
 
         $http = eZHTTPTool::instance();
-        $module = $GLOBALS['module'];
+        $module = $GLOBALS['eZRequestedModule'];
 
 //         $http->removeSessionVariable( 'LastAccessesURI' );
 //         $http->removeSessionVariable( 'RedirectURIAfterPublish' );
@@ -178,7 +178,7 @@ class eZSurveyRelatedObject extends eZSurveyQuestion
     function relateExistingObject( $http, $action, $objectAttribute, $parameters )
     {
         $assignedNodesIDs = array();
-        $module = $GLOBALS['module'];
+        $module = $GLOBALS['eZRequestedModule'];
         $objectID = $objectAttribute->attribute( 'contentobject_id' );
         $contentObjectAttributeID = $objectAttribute->attribute( 'id' );
         $contentClassAttributeID = $objectAttribute->attribute( 'contentclassattribute_id' );
@@ -292,7 +292,7 @@ class eZSurveyRelatedObject extends eZSurveyQuestion
             if ( $addVersion === true )
                 $parameters[] = $contentObject->attribute( 'current_version' );
 
-            $module = $GLOBALS['module'];
+            $module = $GLOBALS['eZRequestedModule'];
             $module->redirectToView( 'edit', $parameters );
         }
 

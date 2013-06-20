@@ -4,7 +4,7 @@
 //
 // Created on: <11-Jun-2008 14:58:01 br>
 //
-// Copyright (C) 1999-2012 eZ Systems AS. All rights reserved.
+// Copyright (C) 1999-2013 eZ Systems AS. All rights reserved.
 //
 // This source file is part of the eZ publish (tm) Open Source Content
 // Management System.
@@ -199,7 +199,7 @@ class eZSurveyWizard
         $db->begin();
         foreach ( $this->tableList() as $table )
         {
-            $query = "ALTER TABLE $table TYPE = innodb";
+            $query = "ALTER TABLE $table ENGINE = innodb";
             $db->query( $query );
         }
         $db->commit();
