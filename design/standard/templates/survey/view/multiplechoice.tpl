@@ -1,4 +1,4 @@
-<label>{$question.question_number}. {$question.text|wash('xhtml')} {switch match=$question.num}{case match=1}<strong class="required">*</strong>{/case}{case match=2}<strong class="required">*</strong>{/case}{/switch}</label>
+<label>{$question.question_number}. {$question.text|wash('xhtml')} {if $question.mandatory}<strong class="required">*</strong>{/if}</label>
 <div class="survey-choices float-break">
 {def $attr_id=concat($prefix_attribute,'_ezsurvey_answer_id_',$question.id,'_', $attribute_id)}
 {def $attr_name=concat($prefix_attribute, '_ezsurvey_answer_' , $question.id, '_' , $attribute_id)}
