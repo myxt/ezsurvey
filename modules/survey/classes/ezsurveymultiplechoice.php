@@ -316,6 +316,7 @@ class eZSurveyMultipleChoice extends eZSurveyQuestion
 
         $postSurveyAnswer = $prefix . '_ezsurvey_answer_' . $this->ID .  '_' . $attributeID;
         if ( !$http->hasPostVariable( $postSurveyAnswer ) and
+             $this->attribute('mandatory') and
              $this->attribute( 'num' ) != 3 and         // 3 - checkboxes in a row
              $this->attribute( 'num' ) != 4 )           // 4 - checkboxes in a column
         {

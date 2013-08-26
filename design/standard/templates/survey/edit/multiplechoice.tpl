@@ -17,6 +17,12 @@
 </select>
 </div>
 
+<div class="block">
+<input type="hidden" name="{$prefix_attribute}_ezsurvey_question_{$question.id}_mandatory_hidden_{$attribute_id}" value="1" />
+<label><input type="checkbox" name="{$prefix_attribute}_ezsurvey_question_{$question.id}_mandatory_{$attribute_id}" value="1"{section show=$question.mandatory} checked="checked"{/section} />
+{"Mandatory answer"|i18n('survey')}</label>
+</div>
+
 <table class="list" cellspacing="0">
 <tr>
   <th class="tight">&nbsp;</th>
