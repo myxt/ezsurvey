@@ -56,6 +56,9 @@
 <form class="float" action={concat('/survey/result_edit/', $result_id)|ezurl()} style="float: left; margin-right: 0.3em;">
 <input class="button" name="EditSruveyResultButton" type="submit" value="Edit" method="post" />
 </form>
+<form class="float" action={concat('/survey/result_remove/', $result_id)|ezurl()} style="float: left; margin-right: 0.3em;">
+  <input class="button" name="RemoveSurveyResultButton" type="submit" value="Remove" method="post" />
+</form>
 <form class="float" action={concat('/survey/export/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code, '/')|ezurl()} style="float: left;">
 <input class="button" name="ExportCSVButton" type="submit" value="Export CSV" method="post" />
 </form>
