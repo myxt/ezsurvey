@@ -24,19 +24,19 @@ class eZSurveyDateEntry extends eZSurveyEntry
         if ( $this->attribute( 'mandatory' ) == 1 && strlen( $answer ) == 0 )
         {
             $validation['error'] = true;
-            $validation['errors'][] = array( 'message' => ezpi18n::tr( 'survey', 'Please answer the question %number as well!', null,
+            $validation['errors'][] = array( 'message' => ezi18n( 'survey', 'Please answer the question %number as well!', null,
                                                                   array( '%number' => $this->questionNumber() ) ),
                                              'question_number' => $this->questionNumber(),
                                              'code' => 'date_answer_question',
                                              'question' => $this );
         }
         
-        $data = explode( '-', $answer );        
-
-        if ( !checkdate( (int) $data[1], (int) $data[0], (int) $data[2] ) )
+        $data = explode( '-', $answer );
+        $validator = new MyxtDateTimeValidator();
+        if ( $this->attribute( 'mandatory' ) == 1 && $validator->validateDate( $data[0], $data[1], $data[2] ) == eZInputValidator::STATE_INVALID )
         {
             $validation['error'] = true;
-            $validation['errors'][] = array( 'message' => ezpi18n::tr( 'survey', 'Please enter a valid date!', null,
+            $validation['errors'][] = array( 'message' => ezi18n( 'survey', 'Please enter a valid date!', null,
                                                                   array( '%number' => $this->questionNumber() ) ),
                                              'question_number' => $this->questionNumber(),
                                              'code' => 'date_answer_date',
