@@ -903,5 +903,13 @@
         <source>Text Entry</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Clear results</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are you sure you want to clear all results for this survey?</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

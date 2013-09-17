@@ -939,5 +939,13 @@
         <source>Transaction Entry</source>
         <translation>Transactieveld</translation>
     </message>
+    <message>
+        <source>Clear results</source>
+        <translation>Alle afnamen wissen</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to clear all results for this survey?</source>
+        <translation>Weet u zeker dat u alle afnamen voor deze vragenlijst wilt wissen?</translation>
+    </message>
 </context>
 </TS>

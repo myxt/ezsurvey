@@ -50,12 +50,12 @@
 {* DESIGN: Control bar START *}<div class="box-bc"><div class="box-ml"><div class="box-mr"><div class="box-tc"><div class="box-bl"><div class="box-br">
 <div class="block float-break">
 
-<form class="float" action={concat('/survey/export/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl}>
+<form action={concat('/survey/export/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl}>
 <input class="button" type="submit" value="Export CSV" />
 </form>
 
-<form class="float" action={concat('/survey/clear/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl} onSubmit="if(!confirm('Weet u zeker dat u alle afnamen van dit formulier wilt wissen?')) return false;">
-<input class="button" type="submit" value="Clear results" />
+<form action={concat('/survey/clear/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl} onSubmit="if(!confirm('{'Are you sure you want to clear all results for this survey?'|i18n('survey')}')) return false;">
+<input class="button" type="submit" value="{'Clear results'|i18n('survey')}" />
 </form>
 
 </div>
