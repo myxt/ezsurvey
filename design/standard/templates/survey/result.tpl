@@ -54,6 +54,10 @@
 <input class="button" type="submit" value="Export CSV" />
 </form>
 
+<form class="float" action={concat('/survey/clear/', $contentobject_id, '/', $contentclassattribute_id, '/', $language_code)|ezurl} onSubmit="if(!confirm('Weet u zeker dat u alle afnamen van dit formulier wilt wissen?')) return false;">
+<input class="button" type="submit" value="Clear results" />
+</form>
+
 </div>
 {* DESIGN: Control bar END *}</div></div></div></div></div></div>
 </div>

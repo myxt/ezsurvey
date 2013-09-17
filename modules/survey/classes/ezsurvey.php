@@ -907,6 +907,18 @@ class eZSurvey extends eZPersistentObject
         }
     }
 
+    // Clear a survey
+    function clear( $contentClassAttributeID, $conditions = null, $extraConditions = null )
+    {
+        $db = eZDB::instance();
+        $db->begin();
+          $results = $db->arrayQuery( "SELECT * FROM ezsurveyresult WHERE survey_id = " . $this->ID );
+          foreach( $results as $result )
+            $db->query( "DELETE FROM ezsurveyquestionresult WHERE result_id = " . $result['id'] );
+          $db->query( "DELETE FROM ezsurveyresult WHERE survey_id = " . $this->ID );
+        $db->commit();
+    }
+
     // Removes a survey, it's question and all collected data
     function remove( $conditions = null, $extraConditions = null )
     {
