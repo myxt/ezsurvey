@@ -32,8 +32,8 @@ class eZSurveyDateEntry extends eZSurveyEntry
         }
         
         $data = explode( '-', $answer );
-        $validator = new MyxtDateTimeValidator();
-        if ( $this->attribute( 'mandatory' ) == 1 && $validator->validateDate( $data[0], $data[1], $data[2] ) == eZInputValidator::STATE_INVALID )
+
+        if ( $this->attribute( 'mandatory' ) == 1 && self::validateDate( $data[0], $data[1], $data[2] ) == eZInputValidator::STATE_INVALID )
         {
             $validation['error'] = true;
             $validation['errors'][] = array( 'message' => ezi18n( 'survey', 'Please enter a valid date!', null,
@@ -74,6 +74,16 @@ class eZSurveyDateEntry extends eZSurveyEntry
     		return '';
     	}
     	return $this->Default;
+    }
+
+    private static function validateDate( $day, $month, $year )
+    {
+        if ( !checkdate( $month, $day, $year ) || $year < 1900 || $year > date('Y') )
+        {
+            return eZInputValidator::STATE_INVALID;
+        }
+        else
+            return eZInputValidator::STATE_ACCEPTED;
     }
 }
 
