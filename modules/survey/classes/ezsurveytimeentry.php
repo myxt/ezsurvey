@@ -24,7 +24,7 @@ class eZSurveyTimeEntry extends eZSurveyEntry
         if ( $this->attribute( 'mandatory' ) == 1 && strlen( $answer ) == 0 )
         {
             $validation['error'] = true;
-            $validation['errors'][] = array( 'message' => ezi18n( 'survey', 'Please answer the question %number as well!', null,
+            $validation['errors'][] = array( 'message' => ezpi18n::tr( 'survey', 'Please answer the question %number as well!', null,
                                                                   array( '%number' => $this->questionNumber() ) ),
                                              'question_number' => $this->questionNumber(),
                                              'code' => 'time_answer_question',
@@ -36,7 +36,7 @@ class eZSurveyTimeEntry extends eZSurveyEntry
         if ( $this->attribute( 'mandatory' ) == 1 && $validator->validateTime( $data[0], $data[1] ) == eZInputValidator::STATE_INVALID )
         {
             $validation['error'] = true;
-            $validation['errors'][] = array( 'message' => ezi18n( 'survey', 'Please enter a valid time!', null,
+            $validation['errors'][] = array( 'message' => ezpi18n::tr( 'survey', 'Please enter a valid time!', null,
                                                                   array( '%number' => $this->questionNumber() ) ),
                                              'question_number' => $this->questionNumber(),
                                              'code' => 'time_answer_time',
