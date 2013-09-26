@@ -78,7 +78,7 @@ class eZSurveyDateEntry extends eZSurveyEntry
 
     private static function validateDate( $day, $month, $year )
     {
-        if ( !checkdate( $month, $day, $year ) || $year < 1900 || $year > date('Y') )
+        if ( !checkdate( $month, $day, $year ) )
         {
             return eZInputValidator::STATE_INVALID;
         }
